@@ -1,0 +1,147 @@
+Basic java practice:
+1.Write a program that print hello world.
+ANS:
+public class Main{
+public static void main(String [] args){
+
+System.out.println(“Hello World”);
+
+}
+}
+
+
+2.Write a program that take two number as input and print sum, difference, product and quotient.
+ANS:
+import java.util.Scanner;
+
+public class Calculator {
+public static void main(String [] args){
+ Scanner scanner = new Scanner(System.in);
+
+System.out.println("Enter first number:");
+int num1 = scanner.nextInt();
+
+System.out.println( "Enter second number:");
+int num2 = scanner.nextInt();
+int sum = num1 + num2;
+int difference = num1 - num2;
+int product = num1 * num2;
+double quotient = (double)  num1/num2 ;
+
+System.out.println("Sum :"+sum);
+System.out.println("Difference :"+difference);
+System.out.println("Product :"+product);
+
+if(num2 != 0){
+System.out.println("The quotient num is:"+sum);
+}
+else{
+System.out.println("The num 2 cannot be zero");
+}
+scanner.close();
+}
+}
+
+
+3.Check the num is odd or even.
+
+ANS:
+import java.util.Scanner;
+
+public class equ{
+public static void main(String [] args){
+ Scanner scanner = new Scanner(System.in);
+
+System.out.println("Enter the number:");
+int num1 = scanner.nextInt();
+int mod = num1%2;
+
+if(mod == 0){
+System.out.println(num1 + " num is even.");
+}
+else{
+System.out.println(num1 + " The num is odd.");
+}
+scanner.close();
+}
+}
+
+
+4.Factorial using iterative approach.
+ANS:
+
+import java.util.Scanner;
+
+public class factorial{
+    public static void main(String [] args){
+        Scanner scanner = new Scanner(System.in);
+         
+        System.out.println("enter num");
+        int num = scanner.nextInt();
+        
+        int factorial = 1;
+        for(int i = 1; i<=num; i++){
+            factorial *= i; 
+        }
+        System.out.println(“The factorial of ”+num+”is:”+factorial);
+    }
+}
+
+5.Fibonacci series.
+ANS:
+
+import java.util.Scanner;
+
+public class fibonacci {
+    public static void main(String [] args){
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("enter the term: ");
+        int term = scanner.nextInt();
+        
+        int firstterm = 0;
+        int secondterm = 1;
+        
+        System.out.println("fibonacci series is:");
+
+        for(int i=3; i<=term; i++){
+            int nextterm = firstterm+secondterm;
+            firstterm = secondterm;
+            secondterm = nextterm;
+        
+        System.out.println(nextterm);
+        }
+    }
+}
+
+
+
+6.Find the num is prime or not.
+ANS:
+import java.util.Scanner;
+public class Main{
+    public static void main(String[]args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a num:");
+        int number = scanner.nextInt();
+        
+        if(isPrime(number)){
+            System.out.println(number + " is prime");
+        }
+        else{
+            System.out.println(number + " is not prime");
+        }
+}
+
+    public static boolean isPrime(int n){
+        if(n<2){
+            return false;
+        }
+        for(int i=2; i<=Math.sqrt(n);i++){
+            if(n % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+}
